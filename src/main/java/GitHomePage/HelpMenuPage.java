@@ -12,8 +12,9 @@ public class HelpMenuPage extends BasicPage {
         super(driver);
     }
 
+
     public OSnamePage  downloadForWindows(String nameOS) {
-        driver.findElement(By.xpath(""+nameOS+"")).click();
+        driver.findElement(By.xpath("//div//tbody//a[text()='"+nameOS+"']")).click();
         return new OSnamePage(driver);
     }
 }

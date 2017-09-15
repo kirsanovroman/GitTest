@@ -14,6 +14,6 @@ public class OSnamePage extends BasicPage {
     }
 
     public String getItemName(String Item) {
-        return driver.findElement(By.xpath("")).getText();
+        return driver.findElement(By.xpath("//div//h3[text()='"+Item+"']")).getText();
     }
 }

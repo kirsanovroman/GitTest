@@ -1,8 +1,6 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 /**
  * Created by kirsanov_rd on 13.09.2017.
@@ -12,7 +10,7 @@ public abstract class GitTest {
 
     protected ChromeDriver driver;
 
-    @BeforeMethod
+    @BeforeClass
     public void setUp(){
         driver= new ChromeDriver();
         System.out.println("init Driver");
@@ -24,7 +22,7 @@ public abstract class GitTest {
 //         Thread.sleep(3000);
 //     }
 
-    @AfterMethod
+    @AfterClass
     public void tearsDown() {
         driver.close();
         System.out.println("close driver");
