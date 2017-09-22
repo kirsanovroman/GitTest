@@ -3,10 +3,11 @@
 <suite name="Suite1" verbose="1" >
     <test name="Nopackage" >
         <classes>
-            <class name="AboutPageTest"/>
+            <class name="AboutPageTest">
                 <methods>
                     <include name="gitSearchCheck"/>
                 </methods>
+            </class>
         </classes>
     </test>
 
